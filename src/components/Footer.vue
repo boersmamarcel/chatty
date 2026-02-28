@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronsDown } from "lucide-vue-next";
+import { MessageSquare } from "lucide-vue-next";
 import Separator from "./ui/separator/Separator.vue";
 </script>
 
@@ -17,40 +17,43 @@ import Separator from "./ui/separator/Separator.vue";
             href="#"
             class="flex font-bold items-center"
           >
-            <ChevronsDown
-              class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
+            <MessageSquare
+              class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white p-1.5"
             />
-
-            <h3 class="text-2xl">Shadcn-Vue</h3>
+            <h3 class="text-2xl">Chatty</h3>
           </a>
+          <p class="mt-3 text-sm text-muted-foreground">
+            Native desktop LLM client.<br />Fast. Private. Open source.
+          </p>
         </div>
 
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Contact</h3>
+          <h3 class="font-bold text-lg">Project</h3>
           <div>
             <a
-              href="#"
+              href="https://github.com/boersmamarcel/chatty2"
+              target="_blank"
               class="opacity-60 hover:opacity-100"
             >
-              Github
+              GitHub
             </a>
           </div>
-
           <div>
             <a
-              href="#"
+              href="https://github.com/boersmamarcel/chatty2/releases"
+              target="_blank"
               class="opacity-60 hover:opacity-100"
             >
-              Twitter
+              Releases
             </a>
           </div>
-
           <div>
             <a
-              href="#"
+              href="https://github.com/boersmamarcel/chatty2/issues"
+              target="_blank"
               class="opacity-60 hover:opacity-100"
             >
-              Instagram
+              Issues
             </a>
           </div>
         </div>
@@ -59,104 +62,54 @@ import Separator from "./ui/separator/Separator.vue";
           <h3 class="font-bold text-lg">Platforms</h3>
           <div>
             <a
-              href="#"
+              href="https://github.com/boersmamarcel/chatty2/releases"
+              target="_blank"
               class="opacity-60 hover:opacity-100"
             >
-              iOS
+              macOS
             </a>
           </div>
-
           <div>
             <a
-              href="#"
+              href="https://github.com/boersmamarcel/chatty2/releases"
+              target="_blank"
               class="opacity-60 hover:opacity-100"
             >
-              Android
+              Linux
             </a>
           </div>
-
           <div>
             <a
-              href="#"
+              href="https://github.com/boersmamarcel/chatty2/releases"
+              target="_blank"
               class="opacity-60 hover:opacity-100"
             >
-              Web
+              Windows
             </a>
           </div>
         </div>
 
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Help</h3>
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              FAQ
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Feedback
-            </a>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Socials</h3>
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Twitch
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Discord
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Dribbble
-            </a>
-          </div>
+          <h3 class="font-bold text-lg">Providers</h3>
+          <div class="opacity-60">OpenAI</div>
+          <div class="opacity-60">Anthropic</div>
+          <div class="opacity-60">Google Gemini</div>
+          <div class="opacity-60">Ollama</div>
         </div>
       </div>
 
       <Separator class="my-6" />
-      <section className="">
-        <h3 class="">
-          &copy; 2024 Designed and developed by
+      <section>
+        <h3 class="text-sm text-muted-foreground">
+          &copy; 2025
           <a
             target="_blank"
-            href="https://github.com/leoMirandaa"
-            className="text-primary transition-all border-primary hover:border-b-2"
+            href="https://github.com/boersmamarcel"
+            class="text-primary transition-all border-primary hover:border-b-2"
           >
-            Leo Miranda
+            Marcel Boersma
           </a>
+          · MIT License
         </h3>
       </section>
     </div>

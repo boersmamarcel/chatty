@@ -2,14 +2,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import {
-  Paintbrush,
-  MessageCircle,
-  TabletSmartphone,
-  BadgeCheck,
-  Goal,
-  PictureInPicture,
-  MousePointerClick,
-  Newspaper,
+  Cpu,
+  Shield,
+  Palette,
+  DollarSign,
+  Wrench,
+  Globe,
 } from "lucide-vue-next";
 
 interface FeaturesProps {
@@ -20,62 +18,58 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "tabletSmartphone",
-    title: "Mobile Friendly",
+    icon: "globe",
+    title: "Multi-Provider Support",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Connect to OpenAI, Anthropic, Google Gemini, Mistral, Azure OpenAI, and Ollama. Switch models mid-conversation with a single click.",
   },
   {
-    icon: "badgeCheck",
-    title: "Social Proof",
+    icon: "cpu",
+    title: "Rich Content Rendering",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Full Markdown support with syntax-highlighted code blocks, LaTeX math rendered as crisp SVGs, and inline image & PDF previews.",
   },
   {
-    icon: "goal",
-    title: "Targeted Content",
+    icon: "dollarSign",
+    title: "Cost Tracking",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "See per-message token usage and cost estimates in real time. Track spending per conversation so you always know what you're paying for.",
   },
   {
-    icon: "pictureInPicture",
-    title: "Strong Visuals",
+    icon: "wrench",
+    title: "Tool Use & MCP",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "First-class Model Context Protocol support. Run file operations, bash commands, and custom MCP servers — all sandboxed for safety.",
   },
   {
-    icon: "mousePointerClick",
-    title: "Clear CTA",
+    icon: "palette",
+    title: "20+ Themes",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Light and dark variants for Catppuccin, TokyoNight, Gruvbox, Solarized, and more. Your workflow, your aesthetic.",
   },
   {
-    icon: "newspaper",
-    title: "Clear Headline",
+    icon: "shield",
+    title: "Privacy First",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "No telemetry, no cloud storage. API keys stay local. Shell execution is sandboxed. Workspace file access is scoped.",
   },
 ];
 
 const iconMap: Record<
   string,
-  | typeof TabletSmartphone
-  | typeof BadgeCheck
-  | typeof Goal
-  | typeof PictureInPicture
-  | typeof Paintbrush
-  | typeof MousePointerClick
-  | typeof MessageCircle
-  | typeof Newspaper
+  | typeof Cpu
+  | typeof Shield
+  | typeof Palette
+  | typeof DollarSign
+  | typeof Wrench
+  | typeof Globe
 > = {
-  tabletSmartphone: TabletSmartphone,
-  badgeCheck: BadgeCheck,
-  goal: Goal,
-  pictureInPicture: PictureInPicture,
-  paintbrush: Paintbrush,
-  mousePointerClick: MousePointerClick,
-  messageCircle: MessageCircle,
-  newspaper: Newspaper,
+  cpu: Cpu,
+  shield: Shield,
+  palette: Palette,
+  dollarSign: DollarSign,
+  wrench: Wrench,
+  globe: Globe,
 };
 </script>
 
@@ -89,13 +83,12 @@ const iconMap: Record<
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      What Makes Us Different
+      Everything you need, nothing you don't
     </h2>
 
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-      fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-      facere tenetur.
+      Built with Rust and GPUI for a native, GPU-accelerated experience that
+      feels instant — because it is.
     </h3>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

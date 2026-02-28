@@ -2,12 +2,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import {
-  Sparkle,
-  Tag,
-  Paintbrush,
-  Blocks,
-  LineChart,
-  Wallet,
+  Zap,
+  Heart,
+  Monitor,
 } from "lucide-vue-next";
 
 interface BenefitsProps {
@@ -18,46 +15,34 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "blocks",
-    title: "Build Brand Trust",
+    icon: "zap",
+    title: "GPU-Accelerated UI",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Built with GPUI — the same framework powering Zed editor. Every frame is rendered on the GPU, giving you a silky-smooth experience even with large responses.",
   },
   {
-    icon: "lineChart",
-    title: "More Leads",
+    icon: "heart",
+    title: "Open Source & Free",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "MIT licensed and completely free. Bring your own API keys. No vendor lock-in, no subscription tiers, no feature gates. Just a great app.",
   },
   {
-    icon: "wallet",
-    title: "Higher Conversions",
+    icon: "monitor",
+    title: "Truly Cross-Platform",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
-  },
-  {
-    icon: "sparkle",
-    title: "Test Marketing Ideas",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Native binaries for macOS (Intel & Apple Silicon), Linux (x86_64), and Windows (x86_64). One consistent experience, everywhere you work.",
   },
 ];
 
 const iconMap: Record<
   string,
-  | typeof Sparkle
-  | typeof Tag
-  | typeof Paintbrush
-  | typeof Blocks
-  | typeof LineChart
-  | typeof Wallet
+  | typeof Zap
+  | typeof Heart
+  | typeof Monitor
 > = {
-  sparkle: Sparkle,
-  tag: Tag,
-  paintbrush: Paintbrush,
-  blocks: Blocks,
-  lineChart: LineChart,
-  wallet: Wallet,
+  zap: Zap,
+  heart: Heart,
+  monitor: Monitor,
 };
 </script>
 
@@ -71,16 +56,15 @@ const iconMap: Record<
         <h2 class="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Your Shortcut to Success
+          Why developers choose Chatty
         </h2>
         <p class="text-xl text-muted-foreground mb-8">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non ducimus
-          reprehenderit architecto rerum similique facere odit deleniti
-          necessitatibus quo quae.
+          Chatty was built by a developer who wanted a fast, private, and
+          capable LLM client — and couldn't find one. Now it's yours.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-4 w-full">
+      <div class="grid lg:grid-cols-1 gap-4 w-full">
         <Card
           v-for="({ icon, title, description }, index) in benefitList"
           :key="title"
