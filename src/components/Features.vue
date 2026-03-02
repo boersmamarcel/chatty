@@ -8,6 +8,9 @@ import {
   DollarSign,
   Wrench,
   Globe,
+  Database,
+  Brain,
+  RefreshCw,
 } from "lucide-vue-next";
 
 interface FeaturesProps {
@@ -53,6 +56,24 @@ const featureList: FeaturesProps[] = [
     description:
       "No telemetry, no cloud storage. API keys stay local. Shell execution is sandboxed. Workspace file access is scoped.",
   },
+  {
+    icon: "brain",
+    title: "Thinking & Traces",
+    description:
+      "Collapsible extended thinking blocks let you inspect a model's reasoning step by step. Tool call traces show duration and status at a glance.",
+  },
+  {
+    icon: "database",
+    title: "Training Data Export",
+    description:
+      "Export conversations as ATIF or JSONL (SFT & DPO pairs) for fine-tuning. Thumbs up/down feedback and regeneration pairs are tracked automatically.",
+  },
+  {
+    icon: "refreshCw",
+    title: "Auto-Updates",
+    description:
+      "Background update checks against GitHub releases. One-click install with SHA-256 verification and automatic relaunch — always on the latest version.",
+  },
 ];
 
 const iconMap: Record<
@@ -63,6 +84,9 @@ const iconMap: Record<
   | typeof DollarSign
   | typeof Wrench
   | typeof Globe
+  | typeof Database
+  | typeof Brain
+  | typeof RefreshCw
 > = {
   cpu: Cpu,
   shield: Shield,
@@ -70,6 +94,9 @@ const iconMap: Record<
   dollarSign: DollarSign,
   wrench: Wrench,
   globe: Globe,
+  database: Database,
+  brain: Brain,
+  refreshCw: RefreshCw,
 };
 </script>
 

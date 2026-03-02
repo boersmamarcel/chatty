@@ -36,7 +36,7 @@ import GithubIcon from "@/icons/GithubIcon.vue";
         </div>
 
         <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          GPU-accelerated and privacy-first. Connect to Claude, GPT-4, Gemini,
+          GPU-accelerated and privacy-first. Connect to Claude, GPT-5, Gemini 3,
           Mistral, and local models — all in one app. No subscriptions, no
           cloud storage, no telemetry.
         </p>
@@ -74,7 +74,7 @@ import GithubIcon from "@/icons/GithubIcon.vue";
         </div>
 
         <p class="text-sm text-muted-foreground">
-          macOS · Linux · Windows &nbsp;·&nbsp; v0.1.50
+          macOS · Linux · Windows &nbsp;·&nbsp; v0.1.66
         </p>
       </div>
 
@@ -88,10 +88,10 @@ import GithubIcon from "@/icons/GithubIcon.vue";
           class="w-full mx-auto rounded-lg relative leading-none flex flex-col items-center justify-center border border-t-2 border-t-primary/30 img-border-animation bg-card/50 p-12 gap-6"
         >
           <div class="flex flex-wrap justify-center gap-3">
-            <Badge variant="secondary" class="text-base px-4 py-2">Claude 3.5</Badge>
-            <Badge variant="secondary" class="text-base px-4 py-2">GPT-4o</Badge>
-            <Badge variant="secondary" class="text-base px-4 py-2">Gemini 1.5</Badge>
-            <Badge variant="secondary" class="text-base px-4 py-2">Mistral</Badge>
+            <Badge variant="secondary" class="text-base px-4 py-2">Claude Opus 4.6</Badge>
+            <Badge variant="secondary" class="text-base px-4 py-2">GPT-5.2</Badge>
+            <Badge variant="secondary" class="text-base px-4 py-2">Gemini 3</Badge>
+            <Badge variant="secondary" class="text-base px-4 py-2">Mistral Large 3</Badge>
             <Badge variant="secondary" class="text-base px-4 py-2">Ollama</Badge>
             <Badge variant="secondary" class="text-base px-4 py-2">Azure OpenAI</Badge>
           </div>

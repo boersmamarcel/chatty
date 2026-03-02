@@ -23,7 +23,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { Menu, MessageSquare } from "lucide-vue-next";
+import { Menu } from "lucide-vue-next";
 import GithubIcon from "@/icons/GithubIcon.vue";
 import ToggleTheme from "./ToggleTheme.vue";
 
@@ -66,8 +66,10 @@ const isOpen = ref<boolean>(false);
       href="#"
       class="font-bold text-lg flex items-center"
     >
-      <MessageSquare
-        class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white p-1.5"
+      <img
+        src="/app_icon.png"
+        alt="Chatty"
+        class="w-9 h-9 mr-2 rounded-lg"
       />
       Chatty</a
     >
@@ -92,8 +94,10 @@ const isOpen = ref<boolean>(false);
                   href="#"
                   class="flex items-center"
                 >
-                  <MessageSquare
-                    class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white p-1.5"
+                  <img
+                    src="/app_icon.png"
+                    alt="Chatty"
+                    class="size-9 mr-2 rounded-lg"
                   />
                   Chatty
                 </a>

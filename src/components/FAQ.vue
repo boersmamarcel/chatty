@@ -16,7 +16,7 @@ const FAQList: FAQProps[] = [
   {
     question: "What LLM providers are supported?",
     answer:
-      "Chatty supports OpenAI (GPT-4, o1, o3-mini), Anthropic (Claude 3.5 Sonnet, Opus, Haiku), Google Gemini (1.5 Pro/Flash), Mistral, Azure OpenAI (with Entra ID auth), and Ollama for fully local models. That's 100+ models across 6 providers.",
+      "Chatty supports OpenAI (GPT-4.1, GPT-5, GPT-5.1, GPT-5.2), Anthropic (Claude Opus 4.6, Sonnet 4.6, Haiku 4.5), Google Gemini (3 Pro/Flash), Mistral (Large 3, Small 3.2), Azure OpenAI (with Entra ID auth), and Ollama for fully local models. That's 100+ models across 6 providers.",
     value: "item-1",
   },
   {
