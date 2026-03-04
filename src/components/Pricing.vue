@@ -14,7 +14,7 @@ import { Check } from "lucide-vue-next";
 const benefitList: string[] = [
   "All 6 LLM providers (OpenAI, Anthropic, Google, Mistral, Azure, Ollama)",
   "100+ supported models",
-  "Rich Markdown, code, and LaTeX rendering",
+  "Rich Markdown, code, LaTeX, and Mermaid diagram rendering",
   "Tool use & MCP server support",
   "Cost and token tracking",
   "20+ built-in themes",

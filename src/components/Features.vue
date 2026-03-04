@@ -30,7 +30,7 @@ const featureList: FeaturesProps[] = [
     icon: "cpu",
     title: "Rich Content Rendering",
     description:
-      "Full Markdown support with syntax-highlighted code blocks, LaTeX math rendered as crisp SVGs, and inline image & PDF previews.",
+      "Full Markdown support with syntax-highlighted code blocks, LaTeX math rendered as crisp SVGs, Mermaid diagram rendering (23 diagram types, pure Rust — no browser needed), and inline image & PDF previews.",
   },
   {
     icon: "dollarSign",
