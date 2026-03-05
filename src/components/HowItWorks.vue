@@ -53,7 +53,7 @@ const HowItWorksList: HowItWorksProps[] = [
     <div class="lg:w-[80%] mx-auto relative">
       <div
         v-for="(
-          { badgeTitle, title, description }, index
+          { badgeTitle, title, description, gif }, index
         ) in HowItWorksList"
         :key="title"
         :class="[
