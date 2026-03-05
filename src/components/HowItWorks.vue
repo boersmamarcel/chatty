@@ -6,7 +6,10 @@ interface HowItWorksProps {
   badgeTitle: string;
   title: string;
   description: string;
+  gif?: string;
 }
+
+const base = import.meta.env.BASE_URL;
 
 const HowItWorksList: HowItWorksProps[] = [
   {
@@ -20,12 +23,14 @@ const HowItWorksList: HowItWorksProps[] = [
     title: "Add Your API Keys",
     description:
       "Open Settings and add API keys for the providers you want to use. Keys are stored locally and never leave your machine. Prefer local models? Point Chatty at your Ollama instance.",
+    gif: `${base}add_provider_and_model.gif`,
   },
   {
     badgeTitle: "Step 3",
     title: "Start Chatting",
     description:
       "Pick a model and start a conversation. Switch providers on the fly, use built-in tools, or connect MCP servers for extended capabilities. Chatty gets out of your way.",
+    gif: `${base}shell_command.gif`,
   },
 ];
 </script>
@@ -76,6 +81,15 @@ const HowItWorksList: HowItWorksProps[] = [
           class="hidden md:flex size-20 rounded-full bg-primary/20 ring-8 ring-primary/10 items-center justify-center shrink-0"
         >
           <span class="text-3xl font-bold text-primary">{{ index + 1 }}</span>
+        </div>
+
+        <div class="flex-1 hidden md:block">
+          <img
+            v-if="gif"
+            :src="gif"
+            :alt="title"
+            class="rounded-lg w-full shadow-lg border border-primary/10"
+          />
         </div>
 
         <div

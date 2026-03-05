@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+
 import { ArrowRight, Download } from "lucide-vue-next";
 import GithubIcon from "@/icons/GithubIcon.vue";
+
+const base = import.meta.env.BASE_URL;
 </script>
 
 <template>
@@ -85,19 +88,13 @@ import GithubIcon from "@/icons/GithubIcon.vue";
         ></div>
 
         <div
-          class="w-full mx-auto rounded-lg relative leading-none flex flex-col items-center justify-center border border-t-2 border-t-primary/30 img-border-animation bg-card/50 p-12 gap-6"
+          class="w-full mx-auto rounded-lg relative leading-none border border-t-2 border-t-primary/30 img-border-animation bg-card/50 overflow-hidden"
         >
-          <div class="flex flex-wrap justify-center gap-3">
-            <Badge variant="secondary" class="text-base px-4 py-2">Claude Opus 4.6</Badge>
-            <Badge variant="secondary" class="text-base px-4 py-2">GPT-5.2</Badge>
-            <Badge variant="secondary" class="text-base px-4 py-2">Gemini 3</Badge>
-            <Badge variant="secondary" class="text-base px-4 py-2">Mistral Large 3</Badge>
-            <Badge variant="secondary" class="text-base px-4 py-2">Ollama</Badge>
-            <Badge variant="secondary" class="text-base px-4 py-2">Azure OpenAI</Badge>
-          </div>
-          <p class="text-muted-foreground text-lg text-center">
-            100+ models across 6 providers · Syntax highlighting · LaTeX math · MCP support
-          </p>
+          <img
+            :src="`${base}hero_high_quality.gif`"
+            alt="Chatty in action"
+            class="w-full h-auto"
+          />
         </div>
 
         <!-- gradient effect -->
