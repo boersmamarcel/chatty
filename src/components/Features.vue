@@ -4,13 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Cpu,
   Shield,
-  Palette,
   DollarSign,
   Wrench,
   Globe,
-  Database,
-  Brain,
-  RefreshCw,
+  Terminal,
 } from "lucide-vue-next";
 
 interface FeaturesProps {
@@ -27,10 +24,16 @@ const featureList: FeaturesProps[] = [
       "Connect to OpenAI, Anthropic, Google Gemini, Mistral, Azure OpenAI, and Ollama. Switch models mid-conversation with a single click.",
   },
   {
+    icon: "terminal",
+    title: "Terminal Interface (chatty-tui)",
+    description:
+      "Lightweight TUI for CLI workflows. Use interactively, pipe code for instant analysis (cat file.rs | chatty-tui --pipe), or run headless.",
+  },
+  {
     icon: "cpu",
     title: "Rich Content Rendering",
     description:
-      "Full Markdown support with syntax-highlighted code blocks, LaTeX math rendered as crisp SVGs, Mermaid diagram rendering (23 diagram types, pure Rust — no browser needed), and inline image & PDF previews.",
+      "Full Markdown support with syntax-highlighted code blocks, LaTeX math rendered as crisp SVGs, Mermaid diagrams, and inline image & PDF previews.",
   },
   {
     icon: "dollarSign",
@@ -45,34 +48,10 @@ const featureList: FeaturesProps[] = [
       "First-class Model Context Protocol support. Run file operations, bash commands, and custom MCP servers — all sandboxed for safety.",
   },
   {
-    icon: "palette",
-    title: "20+ Themes",
-    description:
-      "Light and dark variants for Catppuccin, TokyoNight, Gruvbox, Solarized, and more. Your workflow, your aesthetic.",
-  },
-  {
     icon: "shield",
     title: "Privacy First",
     description:
-      "No telemetry, no cloud storage. API keys stay local. Shell execution is sandboxed. Workspace file access is scoped.",
-  },
-  {
-    icon: "brain",
-    title: "Thinking & Traces",
-    description:
-      "Collapsible extended thinking blocks let you inspect a model's reasoning step by step. Tool call traces show duration and status at a glance.",
-  },
-  {
-    icon: "database",
-    title: "Training Data Export",
-    description:
-      "Export conversations as ATIF or JSONL (SFT & DPO pairs) for fine-tuning. Thumbs up/down feedback and regeneration pairs are tracked automatically.",
-  },
-  {
-    icon: "refreshCw",
-    title: "Auto-Updates",
-    description:
-      "Background update checks against GitHub releases. One-click install with SHA-256 verification and automatic relaunch — always on the latest version.",
+      "No telemetry, no cloud storage. API keys stay local. Run fully local with Ollama — no data leaves your machine.",
   },
 ];
 
@@ -80,23 +59,17 @@ const iconMap: Record<
   string,
   | typeof Cpu
   | typeof Shield
-  | typeof Palette
   | typeof DollarSign
   | typeof Wrench
   | typeof Globe
-  | typeof Database
-  | typeof Brain
-  | typeof RefreshCw
+  | typeof Terminal
 > = {
   cpu: Cpu,
   shield: Shield,
-  palette: Palette,
   dollarSign: DollarSign,
   wrench: Wrench,
   globe: Globe,
-  database: Database,
-  brain: Brain,
-  refreshCw: RefreshCw,
+  terminal: Terminal,
 };
 </script>
 
