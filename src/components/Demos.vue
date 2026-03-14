@@ -40,6 +40,21 @@ const demos: DemoProps[] = [
     description: "Add, edit, and remove MCP servers on the fly — even from within the chat itself.",
     gif: `${base}mcp_add_edit_delete2.gif`,
   },
+  {
+    title: "Code Highlighting",
+    description: "Syntax-highlighted code blocks for 30+ languages via tree-sitter. One-click copy included.",
+    gif: `${base}codehighlighting.gif`,
+  },
+  {
+    title: "Web Fetch",
+    description: "Let the LLM fetch and read live web pages — converted to clean markdown, ready for analysis.",
+    gif: `${base}webfetch.gif`,
+  },
+  {
+    title: "Internet Access",
+    description: "Fine-grained network controls for shell commands — allow all, block all, or allow specific domains.",
+    gif: `${base}advanced_internet_access_settings.gif`,
+  },
 ];
 
 const active = ref(0);

@@ -11,6 +11,9 @@ import {
   Database,
   Brain,
   RefreshCw,
+  BookMarked,
+  Terminal,
+  KeyRound,
 } from "lucide-vue-next";
 
 interface FeaturesProps {
@@ -74,6 +77,24 @@ const featureList: FeaturesProps[] = [
     description:
       "Background update checks against GitHub releases. One-click install with SHA-256 verification and automatic relaunch — always on the latest version.",
   },
+  {
+    icon: "bookMarked",
+    title: "Agent Memory",
+    description:
+      "Built-in persistent memory lets the agent remember facts across conversations. Semantic search surfaces the most relevant memories automatically before each response.",
+  },
+  {
+    icon: "terminal",
+    title: "Terminal Interface",
+    description:
+      "chatty-tui brings Chatty to the command line. Use it interactively, fire off headless one-liners, or pipe stdin straight to your LLM.",
+  },
+  {
+    icon: "keyRound",
+    title: "Environment Secrets",
+    description:
+      "Manage per-session environment variables from Settings → Secrets. The AI knows which variable names are available but never sees the actual values.",
+  },
 ];
 
 const iconMap: Record<
@@ -87,6 +108,9 @@ const iconMap: Record<
   | typeof Database
   | typeof Brain
   | typeof RefreshCw
+  | typeof BookMarked
+  | typeof Terminal
+  | typeof KeyRound
 > = {
   cpu: Cpu,
   shield: Shield,
@@ -97,6 +121,9 @@ const iconMap: Record<
   database: Database,
   brain: Brain,
   refreshCw: RefreshCw,
+  bookMarked: BookMarked,
+  terminal: Terminal,
+  keyRound: KeyRound,
 };
 </script>
 

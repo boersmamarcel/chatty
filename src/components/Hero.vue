@@ -77,7 +77,7 @@ const base = import.meta.env.BASE_URL;
         </div>
 
         <p class="text-sm text-muted-foreground">
-          macOS · Linux · Windows &nbsp;·&nbsp; v0.1.66
+          macOS · Linux · Windows &nbsp;·&nbsp; v0.1.101
         </p>
       </div>
 
