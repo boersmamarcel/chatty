@@ -101,7 +101,7 @@ import Separator from "./ui/separator/Separator.vue";
       <Separator class="my-6" />
       <section>
         <h3 class="text-sm text-muted-foreground">
-          &copy; 2025
+          &copy; 2026
           <a
             target="_blank"
             href="https://github.com/boersmamarcel"
