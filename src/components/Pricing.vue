@@ -12,13 +12,14 @@ import {
 import { Check } from "lucide-vue-next";
 
 const benefitList: string[] = [
-  "All 6 LLM providers (OpenAI, Anthropic, Google, Mistral, Azure, Ollama)",
+  "All 6 AI providers (OpenAI, Anthropic, Google, Mistral, Azure, Ollama)",
   "100+ supported models",
   "Rich Markdown, code, LaTeX, and Mermaid diagram rendering",
-  "Tool use & MCP server support",
+  "Tool use, MCP server support & autonomous task execution",
   "Cost and token tracking",
   "20+ built-in themes",
   "Auto-updates with integrity verification",
+  "Desktop UI + terminal interface (chatty-tui)",
   "macOS, Linux, and Windows",
 ];
 </script>
@@ -37,7 +38,7 @@ const benefitList: string[] = [
       class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14"
     >
       Chatty is MIT licensed. No subscriptions, no paywalls, no feature tiers.
-      Bring your own API keys and you're good to go.
+      Bring your own API keys and deploy your agent today.
     </h3>
 
     <div class="flex justify-center">

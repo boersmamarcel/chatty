@@ -1,7 +1,9 @@
 ## Features
-- **Multi-Provider Support**: Integrates with various providers, including details about their specific capabilities and functionalities.
-- **Rich Rendering**: Supports advanced rendering of content with detailed descriptions for Markdown formatting, LaTeX equations, Mermaid diagrams, and image rendering functionality.
-- **Conversations & Cost Tracking**: Utilizes an SQLite database for efficient storage of conversations, token usage visualization for budget management, and comprehensive cost tracking features.
-- **Training Data Export**: Capable of exporting training data in various formats such as ATIF and JSONL, facilitating fine-tuning workflows.
-- **Themes and Auto-Updates**: Provides options for customizability through various themes and manages background updates seamlessly for the latest features.
-- **Agent Memory System**: Implements a sophisticated memory system for persistence, enhanced with a semantic search feature for improved context retrieval.
+- **Agentic Tool Use**: Runs file operations, bash commands, web fetches, and custom MCP servers autonomously — sandboxed for safety.
+- **Multi-Provider Support**: Integrates with OpenAI, Anthropic, Google Gemini, Mistral, Azure OpenAI, and Ollama. Switch models mid-task with a single click.
+- **Rich Rendering**: Full Markdown, syntax-highlighted code, LaTeX math as crisp SVGs, Mermaid diagrams (23 types, pure Rust), and inline image & PDF previews.
+- **Conversations & Cost Tracking**: Local SQLite storage, per-message token usage, and cost estimates in real time.
+- **Training Data Export**: Export agent conversations as ATIF or JSONL (SFT & DPO pairs) for fine-tuning.
+- **Themes and Auto-Updates**: 20+ themes, background update checks with SHA-256 verification.
+- **Agent Memory System**: Persistent memory across sessions with semantic search for automatic context retrieval.
+- **Two Interfaces**: Native desktop UI (GPUI-based) and a terminal interface (chatty-tui) for scripting, automation, and headless use.

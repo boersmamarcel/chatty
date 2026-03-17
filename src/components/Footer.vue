@@ -23,7 +23,7 @@ import Separator from "./ui/separator/Separator.vue";
             <h3 class="text-2xl">Chatty</h3>
           </a>
           <p class="mt-3 text-sm text-muted-foreground">
-            Native desktop LLM client.<br />Fast. Private. Open source.
+            Native desktop AI agent.<br />Fast. Private. Open source.
           </p>
         </div>
 

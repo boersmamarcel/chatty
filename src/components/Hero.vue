@@ -28,20 +28,21 @@ const base = import.meta.env.BASE_URL;
           class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold"
         >
           <h1>
-            The fastest
+            Your personal
             <span
               class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text"
             >
-              native LLM client
+              AI agent
             </span>
-            for your desktop
+            for the desktop
           </h1>
         </div>
 
         <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          GPU-accelerated and privacy-first. Connect to Claude, GPT-5, Gemini 3,
-          Mistral, and local models — all in one app. No subscriptions, no
-          cloud storage, no telemetry.
+          GPU-accelerated and privacy-first. Automate tasks, execute code,
+          browse the web, and manage files — powered by Claude, GPT-5, Gemini 3,
+          Mistral, and local models. Available as a desktop UI and a terminal
+          interface.
         </p>
 
         <div class="space-y-4 md:space-y-0 md:space-x-4">
