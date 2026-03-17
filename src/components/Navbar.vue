@@ -2,8 +2,7 @@
 import { ref } from "vue";
 
 import { useColorMode } from "@vueuse/core";
-const mode = useColorMode();
-mode.value = "dark";
+const mode = useColorMode({ initialValue: "light" });
 
 import {
   NavigationMenu,
