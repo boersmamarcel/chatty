@@ -18,19 +18,19 @@ const benefitList: BenefitsProps[] = [
     icon: "zap",
     title: "GPU-Accelerated UI",
     description:
-      "Built with GPUI — the same framework powering Zed editor. Every frame is rendered on the GPU, giving you a silky-smooth experience even with large responses.",
+      "Built with GPUI — the same framework powering Zed editor. Every frame is rendered on the GPU, giving you a silky-smooth agent interface even during long-running autonomous tasks.",
   },
   {
     icon: "heart",
     title: "Open Source & Free",
     description:
-      "MIT licensed and completely free. Bring your own API keys. No vendor lock-in, no subscription tiers, no feature gates. Just a great app.",
+      "MIT licensed and completely free. Bring your own API keys. No vendor lock-in, no subscription tiers, no feature gates. Your agent, your rules.",
   },
   {
     icon: "monitor",
-    title: "Truly Cross-Platform",
+    title: "Two Interfaces, One Agent",
     description:
-      "Native binaries for macOS (Intel & Apple Silicon), Linux (x86_64), and Windows (x86_64). One consistent experience, everywhere you work.",
+      "Use the native desktop UI for rich visual output, or switch to the terminal interface (chatty-tui) for scripting, automation, and headless runs — same agent, same memory, everywhere you work.",
   },
 ];
 
@@ -59,8 +59,9 @@ const iconMap: Record<
           Why developers choose Chatty
         </h2>
         <p class="text-xl text-muted-foreground mb-8">
-          Chatty was built by a developer who wanted a fast, private, and
-          capable LLM client — and couldn't find one. Now it's yours.
+          Chatty was built by a developer who needed a fast, private, and
+          genuinely capable AI agent — one that could act, not just answer.
+          Available as a desktop UI and a terminal interface.
         </p>
       </div>
 

@@ -22,7 +22,7 @@ const demos: DemoProps[] = [
   },
   {
     title: "Tool Use",
-    description: "Read, write, and delete files within your sandboxed workspace. The LLM asks for approval before any destructive action.",
+    description: "Read, write, and delete files within your sandboxed workspace. The agent asks for approval before any destructive action.",
     gif: `${base}file_add_edit_delete.gif`,
   },
   {
@@ -47,7 +47,7 @@ const demos: DemoProps[] = [
   },
   {
     title: "Web Fetch",
-    description: "Let the LLM fetch and read live web pages — converted to clean markdown, ready for analysis.",
+    description: "Let the agent fetch and read live web pages — converted to clean markdown, ready for analysis.",
     gif: `${base}webfetch.gif`,
   },
   {

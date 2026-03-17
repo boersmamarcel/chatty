@@ -16,20 +16,20 @@ const HowItWorksList: HowItWorksProps[] = [
     badgeTitle: "Step 1",
     title: "Download & Install",
     description:
-      "Grab the latest release for your OS from GitHub — macOS (Intel or Apple Silicon), Linux, or Windows. No package manager required, just run the binary.",
+      "Grab the latest release for your OS from GitHub — macOS (Intel or Apple Silicon), Linux, or Windows. No package manager required, just run the binary. The terminal interface (chatty-tui) ships in the same archive.",
   },
   {
     badgeTitle: "Step 2",
     title: "Add Your API Keys",
     description:
-      "Open Settings and add API keys for the providers you want to use. Keys are stored locally and never leave your machine. Prefer local models? Point Chatty at your Ollama instance.",
+      "Open Settings and add API keys for the providers you want to use. Keys are stored locally and never leave your machine. Prefer local models? Point Chatty at your Ollama instance and run fully offline.",
     gif: `${base}add_provider_and_model.gif`,
   },
   {
     badgeTitle: "Step 3",
-    title: "Start Chatting",
+    title: "Unleash Your Agent",
     description:
-      "Pick a model and start a conversation. Switch providers on the fly, use built-in tools, or connect MCP servers for extended capabilities. Chatty gets out of your way.",
+      "Pick a model and let your agent get to work. Use the desktop UI for rich visual tasks, or switch to the terminal interface for scripting and automation. The agent executes tools, remembers context, and acts — not just answers.",
     gif: `${base}shell_command.gif`,
   },
 ];
@@ -46,7 +46,7 @@ const HowItWorksList: HowItWorksProps[] = [
       </h2>
 
       <h2 class="text-3xl md:text-4xl text-center font-bold">
-        Up and running in minutes
+        Your agent, up and running in minutes
       </h2>
     </div>
 
