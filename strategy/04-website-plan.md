@@ -45,6 +45,8 @@ From a single template landing page to a small, story-led site: **one homepage t
 
 ## 3. Homepage, section by section
 
+> **Superseded for section order and hero copy by [`07-broad-audience.md`](07-broad-audience.md) §8** (broad audience first, developers as a lane). The section specs below still apply to the developer band and `/for/developers`, and their media and copy are reused there.
+
 Each block lists its **job**, **copy draft**, **media** and the **storyline** it comes from. The copy is a first draft; the tone rules are in `02-positioning.md` §6.
 
 ### 3.1 Hero
@@ -92,7 +94,7 @@ Each block lists its **job**, **copy draft**, **media** and the **storyline** it
 
 ### 3.8 "Bring what you have"
 - **H2:** Your AGENTS.md, your skills, your tools.
-- Logos/text: AGENTS.md · CLAUDE.md · SKILL.md · MCP · Notion · Jira/Confluence · Google · Hugging Face.
+- Logos/text: AGENTS.md · CLAUDE.md · SKILL.md · MCP · Google (once verified) · Hugging Face. Add Notion and Jira/Confluence only after they connect without a bridge (see `07-broad-audience.md` G3).
 - **Link:** `/features/skills-and-memory`, `/features/extensions`
 
 ### 3.9 Use-case chooser

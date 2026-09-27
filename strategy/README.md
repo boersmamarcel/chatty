@@ -8,9 +8,11 @@ A full rework of how we position and tell the story of Chatty, based on an audit
 
 **The idea.** *Chatty is an AI agent that shows its work*: you can **see** every step, **steer** at any moment, results are **checked, not trusted**, it produces **real deliverables**, and it's **yours** (any model, your machine, open formats, MIT). → [`02-positioning.md`](02-positioning.md)
 
-**Who for.** Three primary personas: the developer who wants to watch the agent (Daan), the engineer whose code can't leave the building (Priya), and the analyst who needs the report, not the code (Sam). Four secondary: frontend, ops/terminal, AI builders, academics. → [`03-personas.md`](03-personas.md)
+**Broader than engineers (update).** The market now has "AI coworkers" for everyone: Claude Cowork, Microsoft Copilot Cowork, ChatGPT Work. Chatty's broad position: *the AI coworker that works on your computer, not in someone else's cloud*, with no account, no subscription, any model, every step visible and finished files. Five new personas, seven new storylines, a broad homepage, an honest comparison page, and a list of product gaps that must close before targeting non-technical users. → [`07-broad-audience.md`](07-broad-audience.md)
 
-**How we tell it.** A library of 18 storylines, each one person and one task from start to finish, every beat tied to a shipped feature and its docs page. They feed the homepage, seven use-case pages, feature pages and a video library. → [`storylines/`](storylines/README.md)
+**Who for (engineering lane).** Three primary personas: the developer who wants to watch the agent (Daan), the engineer whose code can't leave the building (Priya), and the analyst who needs the report, not the code (Sam). Four secondary: frontend, ops/terminal, AI builders, academics. → [`03-personas.md`](03-personas.md)
+
+**How we tell it.** A library of 25 storylines (18 in the engineering lane, 7 for the broad audience), each one person and one task from start to finish, every beat tied to a shipped feature and its docs page. They feed the homepage, seven use-case pages, feature pages and a video library. → [`storylines/`](storylines/README.md)
 
 **What we build.** A story-led homepage, `/for/*` persona pages, `/features/*` deep dives, a `/security` trust page and an auto-updating `/whats-new`, pre-rendered on the existing Vue stack, plus a system that stops the site going stale again. → [`04-website-plan.md`](04-website-plan.md), [`05-video-and-assets.md`](05-video-and-assets.md)
 
@@ -27,14 +29,15 @@ A full rework of how we position and tell the story of Chatty, based on an audit
 | [`04-website-plan.md`](04-website-plan.md) | Sitemap, homepage section by section with draft copy, page templates, trust page, SEO, tech approach, anti-staleness system, metrics |
 | [`05-video-and-assets.md`](05-video-and-assets.md) | Video formats, production waves, recording standards, asset checklist, distribution |
 | [`06-roadmap.md`](06-roadmap.md) | Phased plan with checklists, launch sequence, risks |
+| [`07-broad-audience.md`](07-broad-audience.md) | **Broad audience**: AI-coworker market, where Chatty wins, capability check, product-readiness gaps G1–G8, audience rings, personas P8–P12, storylines S18–S24, broad homepage, comparison page, channels |
+| [`08-decisions-and-proof.md`](08-decisions-and-proof.md) | Owner decisions (2026-09-27) and the proof program: which numbers to measure and how to publish them |
+| [`founder-note-draft.md`](founder-note-draft.md) | Founder note, **draft awaiting approval** |
 
-## Decisions needed from the owner
+## Decisions
 
-1. **Name and domain.** Keep "Chatty" (with a descriptor) or rename; stay on GitHub Pages or move to a custom domain before investing in SEO.
-2. **Analytics.** Approve cookieless analytics on the marketing site.
-3. **Hive and hosted Chatty.** Neither is publicly reachable yet. Confirm they stay off the homepage until they are, and whether you want a waitlist now.
-4. **Proof points.** Can we publish results from the team smoke test / Harbor evaluations, and a real "day of work" cost figure?
-5. **Founder note.** A short first-person note in your own words.
+Taken 2026-09-27: keep the name · cookieless analytics yes · no waitlist, Hive/hosted stay off the homepage · publish real numbers (proof program) · founder note drafted for approval. Details: [`08-decisions-and-proof.md`](08-decisions-and-proof.md).
+
+**Still open:** approve the [founder note draft](founder-note-draft.md) (fill in the bracketed specifics); custom domain before the launch push.
 
 ## Sources
 

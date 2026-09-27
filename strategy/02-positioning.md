@@ -1,5 +1,7 @@
 # 02 — Positioning and messaging
 
+> **Update 2026-09-27:** the audience widened beyond engineers. For the homepage and all non-developer pages, the plain-language position in [`07-broad-audience.md`](07-broad-audience.md) §2 leads: *"Chatty is the AI coworker that works on your computer, not in someone else's cloud"*, with *"An AI coworker you can watch"* as the broad form of the roof below. This document remains the message house for developer pages and the proof-point reference for every page.
+
 This is the source for every headline, video voice-over and use-case page. If a line of copy doesn't trace back to a pillar and proof point here, it doesn't ship.
 
 ## 1. The one idea

@@ -1,6 +1,6 @@
 # Storyline library
 
-Each storyline is **one person, one task, start to finish**, told so that every beat is a real, shipped Chatty feature. They're the raw material for:
+Twenty-five storylines (S00–S24). Each storyline is **one person, one task, start to finish**, told so that every beat is a real, shipped Chatty feature. They're the raw material for:
 
 - **the homepage** (three of them are the spine: S01, S04, S05, with S02/S03 as proof)
 - **use-case pages** (one page per persona, built from two or three storylines)
@@ -31,6 +31,14 @@ If a feature doesn't appear in a storyline, it probably doesn't belong on the ho
 | [S15](S15-do-it-again-next-month.md) | Do it again next month | P3 Sam, P1 Daan | Deliverables | `/features/skills`, 30s video | ★★ |
 | [S16](S16-teach-it-a-new-trick.md) | Teach it a new trick | P6 Kenji | Yours | `/for/ai-builders`, dev tutorial | ★ |
 | [S17](S17-first-five-minutes.md) | The first five minutes | all | Steer | `/download`, onboarding video | ★★★ |
+| **Broad audience** (see `../07-broad-audience.md`) | | | | | |
+| [S18](S18-the-monday-pile.md) | The Monday pile | P12 Joris, P8 Femke | Deliverables / Steer | `/for/small-business`, 60s video | ★★★ (Ring 2 now; Ring 3 gated) |
+| [S19](S19-client-work-stays-client-work.md) | Client work stays client work | P8 Femke | Yours / Deliverables | Broad homepage, `/for/consultants`, 60s + 3-min | ★★★ |
+| [S20](S20-competitor-watch.md) | Competitor watch | P11 Ruben | See / Deliverables | `/for/marketing`, 60s | ★★ |
+| [S21](S21-briefing-by-nine.md) | Briefing by nine | P9 Anouk | Yours / Checked | `/for/public-sector`, 60s + 3-min | ★★★ |
+| [S22](S22-month-end-without-mystery-numbers.md) | Month-end without mystery numbers | P10 Eva | Checked / Deliverables | `/for/finance`, 60s | ★★ |
+| [S23](S23-tidy-my-folder.md) | Tidy my folder | everyone | Steer / See | Broad homepage opener, 15s loop, 45s | ★★★ |
+| [S24](S24-plan-the-offsite.md) | Plan the team day | P11, P12 | Deliverables | `/features/extensions` | ★ (gated on connectors) |
 
 ★★★ = produce first (Phase 1) · ★★ = Phase 2 · ★ = Phase 3.
 
@@ -55,7 +63,7 @@ If a feature doesn't appear in a storyline, it probably doesn't belong on the ho
 | Approval modes, sandbox, network isolation, secrets | S05, S17, S01 |
 | Cost per message, context bar, delegated cost | S09, S00 |
 | Web search, fetch, Wayback, reranker | S10 |
-| MCP catalog (Notion, Atlassian, Google), custom MCP | S11 |
+| MCP catalog (Notion, Atlassian, Google), custom MCP | S11 (gated), S24 (gated) |
 | Hive / WASM modules | S16 (build your own; marketplace later) |
 | Message queue, /now, ask_user, plan card | S13, S03 |
 | ATIF / SFT / DPO export, Regenerate | S14 |

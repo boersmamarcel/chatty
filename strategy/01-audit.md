@@ -117,7 +117,7 @@ Grouped by the *job* it does for a user, not by crate. "Since" is approximate fr
 | Capability | Since | Why it matters |
 |---|---|---|
 | **Hive marketplace** — sign in, browse, install MCP servers / WASM agent modules / A2A agents; local vs cloud badges; publish your own module | ≤ Sep | An ecosystem story — **but not public yet**: the registry backend works (Ed25519-signed, SHA-256-hashed modules) and staging runs, yet there is no public registry URL (the app defaults to `localhost:8080`), no seeded catalogue, and the dashboard isn't deployed. Market as *"build your own WASM module"* now, *"marketplace"* later |
-| **Built-in catalog**: Hugging Face, Notion, Atlassian (Jira+Confluence), Google Calendar/Gmail/Drive | ≤ Sep | "Works with the tools you already use" |
+| **Built-in catalog**: Hugging Face, Notion, Atlassian (Jira+Confluence), Google Calendar/Gmail/Drive | ≤ Sep | "Works with the tools you already use", **with care**: Notion and Atlassian serve SSE, which Chatty's streamable-HTTP-only client can't connect to without a bridge; the Google trio is unverified end to end. Don't market as one-click yet |
 | **Keyless web search** + optional local **reranker** (top-5 hit rate 48 % → 57 %, top-1 27 % → 49 % in our eval) | Sep 23 | A rare *measured* claim — use it |
 | Wayback Machine fallback for dead/blocked pages | Sep 25 | Small, delightful |
 | **Prompt-cache-friendly** append-only prompts; per-request cache hit tracking; cost uses cached rates | Sep 5 | "Long agent runs cost less than you'd think" — needs a number before we claim it |

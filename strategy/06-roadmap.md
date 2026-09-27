@@ -12,7 +12,8 @@ Goal: nothing on the live site is false. No redesign yet.
 - [ ] Swap stale GIFs for chatty2's current `artifact_*.gif` and `pr_status_bar.gif` where they fit.
 - [ ] Add one "New since spring" strip under the hero: terminal dock with a shared Agent tab · real browser the agent drives · PDFs, charts & slides · agent teams with verified results · runs in Zed.
 - [ ] Delete unused template components and images; fix `package.json` metadata.
-- [ ] Owner decisions: name/domain, analytics, Hive/hosted visibility (see `01-audit.md` §6).
+- [x] Owner decisions: taken 2026-09-27, see `08-decisions-and-proof.md`.
+- [ ] Add cookieless analytics (approved) and a one-line note about it on the privacy page.
 
 **Done when:** every row in the audit's §2 table marked 🔴/🟠 is fixed.
 
@@ -24,15 +25,26 @@ Goal: the homepage tells the story in `04-website-plan.md` §3.
 - [ ] Build homepage sections 3.1–3.13.
 - [ ] `/download` page (OS detection, CLI quickstart, FUSE note, onboarding video).
 - [ ] `/security` trust page (P2 needs it before anything else).
-- [ ] Founder note (owner writes).
-- [ ] Cookieless analytics (if approved) + baseline week.
+- [ ] Founder note: draft in `founder-note-draft.md`; owner fills in the placeholders and approves.
+- [ ] Baseline week of analytics.
 
 **Done when:** the homepage ships, every section has a real clip, and there's a week of baseline metrics.
+
+### Broad-audience additions to Phase 1 (from `07-broad-audience.md`)
+- [ ] Homepage built in the broad order (§8), with the developer band.
+- [ ] `/start` guided setup page + 3-minute non-technical setup video.
+- [ ] Record S23, S19, S21 (broad Wave 1) alongside S01/S04/S05.
+- [ ] Proof program item 1 ("what real tasks cost") → cost table for the "pay per task" section.
+
+## Product readiness track (runs in parallel; owned by chatty2, not this site)
+Gaps G1–G8 in `07-broad-audience.md` §4. Ring-3-targeted campaigns (small business, general office workers) start only after **G1 (no-key setup)** and **G2 (plain folder setup)** ship; connector storylines (S11, S24) wait for **G3**.
 
 ## Phase 2: Depth (3–4 weeks)
 Goal: every persona has a page and every major feature has a home.
 
-- [ ] Use-case pages: `/for/developers`, `/for/private-ai`, `/for/analysts` first; then `/for/frontend`, `/for/automation`.
+- [ ] Use-case pages: `/for/consultants`, `/for/developers`, `/for/public-sector` (+ private-ai angle), `/for/analysts`, `/for/finance` first; then `/for/marketing`, `/for/frontend`, `/for/automation`; `/for/small-business` when G1/G2 ship.
+- [ ] `/compare/ai-coworkers` (moved up from Phase 3).
+- [ ] Proof program items 2, 3, 5 (`08-decisions-and-proof.md`).
 - [ ] Feature pages: terminal, browser, artifacts, teams, models, editor, terminal-app.
 - [ ] Record Wave 2 (S06–S10, S13, S15) + walkthroughs for S02/S04/S05.
 - [ ] `/whats-new` from GitHub Releases with `highlight`-labelled PRs.

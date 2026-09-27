@@ -1,5 +1,7 @@
 # 03 — Personas
 
+> **Update 2026-09-27:** five broad-audience personas (P8 consultant, P9 public-sector analyst, P10 finance, P11 marketing, P12 small-business owner) are in [`07-broad-audience.md`](07-broad-audience.md) §6. Homepage primaries are now **P8 Femke, P3 Sam and P2 Priya**; P1 Daan leads the developer lane.
+
 Seven personas: three **primary** (the homepage speaks to them) and four **secondary** (they get use-case pages and targeted videos). Each is a composite built from what the product already does well, not from market research. Treat them as hypotheses and replace the details with real user interviews once there are users to interview.
 
 Every persona has:
