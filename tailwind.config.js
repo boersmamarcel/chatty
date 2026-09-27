@@ -52,6 +52,10 @@ module.exports = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
+        sky: "hsl(var(--sky))",
+        sun: "hsl(var(--sun))",
+        leaf: "hsl(var(--leaf))",
+        ink: "hsl(var(--ink))",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

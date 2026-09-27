@@ -1,195 +1,99 @@
 <script lang="ts" setup>
 import { ref } from "vue";
-
-import { useColorMode } from "@vueuse/core";
-const mode = useColorMode({ initialValue: "light" });
-
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-
-import { Menu } from "lucide-vue-next";
+import { Menu, Download } from "lucide-vue-next";
 import GithubIcon from "@/icons/GithubIcon.vue";
 import ToggleTheme from "./ToggleTheme.vue";
+import { links } from "@/data/product";
 
-interface RouteProps {
-  href: string;
-  label: string;
-}
+const base = import.meta.env.BASE_URL;
 
-const routeList: RouteProps[] = [
-  {
-    href: "#features",
-    label: "Features",
-  },
-  {
-    href: "#benefits",
-    label: "Benefits",
-  },
-  {
-    href: "#howitworks",
-    label: "How It Works",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
+const routeList = [
+  { href: "#work", label: "What it does" },
+  { href: "#control", label: "How it works" },
+  { href: "#privacy", label: "Privacy" },
+  { href: "#roles", label: "Use cases" },
+  { href: "#developers", label: "Developers" },
 ];
 
-const isOpen = ref<boolean>(false);
+const isOpen = ref(false);
 </script>
 
 <template>
   <header
-    :class="{
-      'shadow-light': mode === 'light',
-      'shadow-dark': mode === 'dark',
-      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
-    }"
+    class="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur-md"
   >
-    <a
-      href="#"
-      class="font-bold text-lg flex items-center"
-    >
-      <img
-        src="/app_icon.png"
-        alt="Chatty"
-        class="w-9 h-9 mr-2 rounded-lg"
-      />
-      Chatty</a
-    >
-    <!-- Mobile -->
-    <div class="flex items-center lg:hidden">
-      <Sheet v-model:open="isOpen">
-        <SheetTrigger as-child>
-          <Menu
-            @click="isOpen = true"
-            class="cursor-pointer"
-          />
-        </SheetTrigger>
+    <div class="container flex h-16 items-center justify-between gap-4">
+      <a href="#" class="flex items-center gap-2 font-semibold text-lg">
+        <img :src="`${base}app_icon.png`" alt="" class="size-8" />
+        Chatty
+      </a>
 
-        <SheetContent
-          side="left"
-          class="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card"
+      <nav class="hidden lg:flex items-center gap-1">
+        <a
+          v-for="r in routeList"
+          :key="r.href"
+          :href="r.href"
+          class="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >{{ r.label }}</a
         >
-          <div>
-            <SheetHeader class="mb-4 ml-4">
-              <SheetTitle class="flex items-center">
-                <a
-                  href="#"
-                  class="flex items-center"
-                >
-                  <img
-                    src="/app_icon.png"
-                    alt="Chatty"
-                    class="size-9 mr-2 rounded-lg"
-                  />
-                  Chatty
-                </a>
+        <a
+          :href="links.docs"
+          target="_blank"
+          class="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >Docs ↗</a
+        >
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-2">
+        <ToggleTheme />
+        <Button as-child size="sm" variant="ghost" aria-label="Chatty on GitHub">
+          <a :href="links.repo" target="_blank"><GithubIcon class="size-5" /></a>
+        </Button>
+        <Button as-child size="sm" class="rounded-full px-4">
+          <a :href="links.releases" target="_blank">
+            <Download class="size-4 mr-2" /> Download free
+          </a>
+        </Button>
+      </div>
+
+      <div class="flex items-center lg:hidden">
+        <Sheet v-model:open="isOpen">
+          <SheetTrigger as-child>
+            <button aria-label="Open menu" @click="isOpen = true">
+              <Menu class="size-6" />
+            </button>
+          </SheetTrigger>
+          <SheetContent side="right" class="flex flex-col gap-2 bg-card">
+            <SheetHeader class="mb-4">
+              <SheetTitle class="flex items-center gap-2">
+                <img :src="`${base}app_icon.png`" alt="" class="size-7" />
+                Chatty
               </SheetTitle>
             </SheetHeader>
-
-            <div class="flex flex-col gap-2">
-              <Button
-                v-for="{ href, label } in routeList"
-                :key="label"
-                as-child
-                variant="ghost"
-                class="justify-start text-base"
-              >
-                <a
-                  @click="isOpen = false"
-                  :href="href"
-                >
-                  {{ label }}
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          <SheetFooter class="flex-col sm:flex-col justify-start items-start">
-            <Separator class="mb-2" />
-            <ToggleTheme />
-          </SheetFooter>
-        </SheetContent>
-      </Sheet>
-    </div>
-
-    <!-- Desktop -->
-    <NavigationMenu class="hidden lg:block">
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <Button
-              v-for="{ href, label } in routeList"
-              :key="label"
-              as-child
-              variant="ghost"
-              class="justify-start text-base"
+            <a
+              v-for="r in routeList"
+              :key="r.href"
+              :href="r.href"
+              class="py-2 text-base"
+              @click="isOpen = false"
+              >{{ r.label }}</a
             >
-              <a :href="href">
-                {{ label }}
-              </a>
+            <a :href="links.docs" target="_blank" class="py-2 text-base">Docs ↗</a>
+            <Button as-child class="mt-4 rounded-full">
+              <a :href="links.releases" target="_blank">Download free</a>
             </Button>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
-
-    <div class="hidden lg:flex">
-      <ToggleTheme />
-
-      <Button
-        as-child
-        size="sm"
-        variant="ghost"
-        aria-label="View on GitHub"
-      >
-        <a
-          aria-label="View on GitHub"
-          href="https://github.com/boersmamarcel/chatty2"
-          target="_blank"
-        >
-          <GithubIcon class="size-5" />
-        </a>
-      </Button>
-
-      <Button
-        as-child
-        size="sm"
-        class="ml-2"
-      >
-        <a
-          href="https://github.com/boersmamarcel/chatty2/releases"
-          target="_blank"
-        >
-          Download
-        </a>
-      </Button>
+            <ToggleTheme />
+          </SheetContent>
+        </Sheet>
+      </div>
     </div>
   </header>
 </template>
-
-<style scoped>
-.shadow-light {
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.085);
-}
-
-.shadow-dark {
-  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.141);
-}
-</style>

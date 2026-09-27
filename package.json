@@ -1,20 +1,16 @@
 {
   "name": "chatty-landing-page",
-  "description": "Marketing page for Chatty — native desktop LLM client",
+  "description": "Marketing site for Chatty, the AI coworker that works on your computer",
   "version": "0.1.0",
   "author": {
     "name": "Marcel Boersma",
     "url": "https://github.com/boersmamarcel"
   },
   "keywords": [
-    "vue",
-    "typescript",
-    "shadcn",
-    "shadcn/vue",
-    "tailwind",
-    "landing-page",
-    "template",
-    "responsive-design"
+    "chatty",
+    "ai-agent",
+    "local-first",
+    "open-source"
   ],
   "type": "module",
   "private": true,

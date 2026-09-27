@@ -1,117 +1,83 @@
 <script setup lang="ts">
-import { MessageSquare } from "lucide-vue-next";
-import Separator from "./ui/separator/Separator.vue";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-vue-next";
+import GithubIcon from "@/icons/GithubIcon.vue";
+import { links } from "@/data/product";
+
+const base = import.meta.env.BASE_URL;
+
+const columns = [
+  {
+    title: "Product",
+    items: [
+      { label: "What it does", href: "#work" },
+      { label: "Privacy", href: "#privacy" },
+      { label: "For developers", href: "#developers" },
+      { label: "Download", href: links.releases },
+    ],
+  },
+  {
+    title: "Learn",
+    items: [
+      { label: "Getting started", href: links.gettingStarted },
+      { label: "Documentation", href: links.docs },
+      { label: "Security & approvals", href: links.security },
+      { label: "Where your data lives", href: links.dataLocations },
+    ],
+  },
+  {
+    title: "Open source",
+    items: [
+      { label: "Source code", href: links.repo },
+      { label: "Report an issue", href: links.issues },
+      { label: "MIT licence", href: `${links.repo}/blob/main/LICENSE` },
+    ],
+  },
+];
 </script>
 
 <template>
-  <footer
-    id="footer"
-    class="container py-24 pb-16 sm:py-32 sm:pb-24"
-  >
-    <div class="p-10 bg-muted/50 dark:bg-card border rounded-2xl">
-      <div
-        class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8"
-      >
-        <div class="col-span-full xl:col-span-2">
-          <a
-            href="#"
-            class="flex font-bold items-center"
-          >
-            <MessageSquare
-              class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white p-1.5"
-            />
-            <h3 class="text-2xl">Chatty</h3>
-          </a>
-          <p class="mt-3 text-sm text-muted-foreground">
-            Native desktop AI agent.<br />Fast. Private. Open source.
-          </p>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Project</h3>
-          <div>
-            <a
-              href="https://github.com/boersmamarcel/chatty2"
-              target="_blank"
-              class="opacity-60 hover:opacity-100"
-            >
-              GitHub
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://github.com/boersmamarcel/chatty2/releases"
-              target="_blank"
-              class="opacity-60 hover:opacity-100"
-            >
-              Releases
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://github.com/boersmamarcel/chatty2/issues"
-              target="_blank"
-              class="opacity-60 hover:opacity-100"
-            >
-              Issues
-            </a>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Platforms</h3>
-          <div>
-            <a
-              href="https://github.com/boersmamarcel/chatty2/releases"
-              target="_blank"
-              class="opacity-60 hover:opacity-100"
-            >
-              macOS
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://github.com/boersmamarcel/chatty2/releases"
-              target="_blank"
-              class="opacity-60 hover:opacity-100"
-            >
-              Linux
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://github.com/boersmamarcel/chatty2/releases"
-              target="_blank"
-              class="opacity-60 hover:opacity-100"
-            >
-              Windows
-            </a>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Providers</h3>
-          <div class="opacity-60">OpenAI</div>
-          <div class="opacity-60">Anthropic</div>
-          <div class="opacity-60">Google Gemini</div>
-          <div class="opacity-60">Ollama</div>
+  <section class="container py-20 md:py-28">
+    <div class="relative overflow-hidden rounded-3xl bg-primary px-8 py-14 text-center text-primary-foreground md:px-16">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 [background:radial-gradient(40%_60%_at_10%_0%,hsl(var(--sky)/0.45),transparent),radial-gradient(40%_60%_at_100%_100%,hsl(var(--sun)/0.45),transparent)]"></div>
+      <div class="relative">
+        <h2 class="text-3xl font-bold md:text-5xl">See what your AI is doing.</h2>
+        <p class="mx-auto mt-4 max-w-xl text-lg opacity-90">
+          Free, open source, and on your computer. macOS, Linux and Windows.
+        </p>
+        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <Button as-child size="lg" variant="secondary" class="rounded-full px-7">
+            <a :href="links.releases" target="_blank"><Download class="mr-2 size-5" /> Download free</a>
+          </Button>
+          <Button as-child size="lg" variant="outline" class="rounded-full border-white/40 bg-transparent px-7 text-primary-foreground hover:bg-white/10 hover:text-primary-foreground">
+            <a :href="links.repo" target="_blank"><GithubIcon class="mr-2 size-5" /> Star on GitHub</a>
+          </Button>
         </div>
       </div>
+    </div>
+  </section>
 
-      <Separator class="my-6" />
-      <section>
-        <h3 class="text-sm text-muted-foreground">
-          &copy; 2026
-          <a
-            target="_blank"
-            href="https://github.com/boersmamarcel"
-            class="text-primary transition-all border-primary hover:border-b-2"
-          >
-            Marcel Boersma
-          </a>
-          · MIT License
-        </h3>
-      </section>
+  <footer class="border-t">
+    <div class="container grid gap-10 py-14 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+      <div>
+        <a href="#" class="flex items-center gap-2 text-lg font-semibold">
+          <img :src="`${base}app_icon.png`" alt="" class="size-8" /> Chatty
+        </a>
+        <p class="mt-3 max-w-xs text-sm text-muted-foreground">
+          The AI coworker that works on your computer, not in someone else's cloud.
+        </p>
+      </div>
+      <div v-for="c in columns" :key="c.title">
+        <h3 class="text-sm font-semibold">{{ c.title }}</h3>
+        <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+          <li v-for="i in c.items" :key="i.label">
+            <a :href="i.href" :target="i.href.startsWith('#') ? undefined : '_blank'" class="hover:text-foreground">{{ i.label }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container border-t py-6 text-xs text-muted-foreground">
+      © 2026 Marcel Boersma · MIT licence
     </div>
   </footer>
 </template>
