@@ -54,7 +54,7 @@ const formats = [
           </button>
         </div>
         <figure class="mt-4">
-          <div class="overflow-hidden rounded-2xl border bg-ink shadow-xl">
+          <div class="overflow-hidden rounded-2xl border bg-card shadow-xl shadow-primary/5">
             <img :key="active.key" :src="`${base}media/${active.gif}`" :alt="active.text" class="w-full" loading="lazy" />
           </div>
           <figcaption class="mt-3 text-sm text-muted-foreground">

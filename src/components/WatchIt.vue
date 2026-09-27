@@ -82,8 +82,8 @@ const modes = [
         </div>
 
         <figure>
-          <div class="overflow-hidden rounded-2xl border bg-ink shadow-2xl shadow-primary/10">
-            <div class="flex items-center gap-1.5 px-4 py-2.5">
+          <div class="overflow-hidden rounded-2xl border bg-card shadow-2xl shadow-primary/10">
+            <div class="flex items-center gap-1.5 border-b bg-muted/60 px-4 py-2.5">
               <span class="size-3 rounded-full bg-destructive/80"></span>
               <span class="size-3 rounded-full bg-sun/80"></span>
               <span class="size-3 rounded-full bg-leaf/80"></span>
