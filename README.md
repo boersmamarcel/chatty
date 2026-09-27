@@ -1,9 +1,14 @@
-## Features
-- **Agentic Tool Use**: Runs file operations, bash commands, web fetches, and custom MCP servers autonomously — sandboxed for safety.
-- **Multi-Provider Support**: Integrates with OpenAI, Anthropic, Google Gemini, Mistral, Azure OpenAI, and Ollama. Switch models mid-task with a single click.
-- **Rich Rendering**: Full Markdown, syntax-highlighted code, LaTeX math as crisp SVGs, Mermaid diagrams (23 types, pure Rust), and inline image & PDF previews.
-- **Conversations & Cost Tracking**: Local SQLite storage, per-message token usage, and cost estimates in real time.
-- **Training Data Export**: Export agent conversations as ATIF or JSONL (SFT & DPO pairs) for fine-tuning.
-- **Themes and Auto-Updates**: 20+ themes, background update checks with SHA-256 verification.
-- **Agent Memory System**: Persistent memory across sessions with semantic search for automatic context retrieval.
-- **Two Interfaces**: Native desktop UI (GPUI-based) and a terminal interface (chatty-tui) for scripting, automation, and headless use.
+# Chatty marketing site
+
+The marketing site for [Chatty](https://github.com/boersmamarcel/chatty2), the AI coworker that works on your computer. It's deployed to GitHub Pages at <https://boersmamarcel.github.io/chatty/>.
+
+- **Stack:** Vue 3, Vite, Tailwind, shadcn-vue components.
+- **Facts the site states** (providers, platforms, links) live in `src/data/product.ts`. The release version is fetched from GitHub at page load, so it's never stale.
+- **Recordings** in `public/media/` are copied from `chatty2/assets/animations/`.
+- **Strategy, personas and storylines** behind the copy are in [`strategy/`](strategy/README.md).
+
+```bash
+npm ci
+npm run dev      # http://localhost:5173/chatty/
+npm run build
+```

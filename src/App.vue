@@ -1,25 +1,33 @@
 <script setup lang="ts">
 import Navbar from "./components/Navbar.vue";
-import Hero from "./components/Hero.vue";
-import Features from "./components/Features.vue";
-import Demos from "./components/Demos.vue";
-import Benefits from "./components/Benefits.vue";
-import HowItWorks from "./components/HowItWorks.vue";
-import Pricing from "./components/Pricing.vue";
+import HeroSection from "./components/HeroSection.vue";
+import HandItWork from "./components/HandItWork.vue";
+import WatchIt from "./components/WatchIt.vue";
+import Deliverables from "./components/Deliverables.vue";
+import Privacy from "./components/Privacy.vue";
+import ModelsSkills from "./components/ModelsSkills.vue";
+import Roles from "./components/Roles.vue";
+import Developers from "./components/Developers.vue";
+import Compare from "./components/Compare.vue";
+import GetStarted from "./components/GetStarted.vue";
 import FAQ from "./components/FAQ.vue";
-import Community from "./components/Community.vue";
 import Footer from "./components/Footer.vue";
 </script>
 
 <template>
   <Navbar />
-  <Hero />
-  <Features />
-  <Demos />
-  <Benefits />
-  <HowItWorks />
-  <Pricing />
-  <FAQ />
-  <Community />
+  <main>
+    <HeroSection />
+    <HandItWork />
+    <WatchIt />
+    <Deliverables />
+    <Privacy />
+    <ModelsSkills />
+    <Roles />
+    <Developers />
+    <Compare />
+    <GetStarted />
+    <FAQ />
+  </main>
   <Footer />
 </template>
