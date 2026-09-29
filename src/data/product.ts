@@ -17,7 +17,6 @@ export const links = {
     "https://boersmamarcel.github.io/chatty2/user/tutorial-team.html",
   swarmTutorial:
     "https://boersmamarcel.github.io/chatty2/user/tutorial-swarm.html",
-  release050: "https://github.com/boersmamarcel/chatty2/releases/tag/v0.5.0",
   skills:
     "https://boersmamarcel.github.io/chatty2/user/memory-and-skills.html",
   providers:

@@ -23,7 +23,7 @@ Goal: the homepage tells the story in `04-website-plan.md` §3.
 - [ ] Add `vue-router` + `vite-ssg`; `src/data/product.ts`; build-time release fetch; daily rebuild + `repository_dispatch` from chatty2 releases.
 - [ ] Record Wave 1 (S01, S02, S03, S04, S05, S17) → loops + social cuts; edit S00.
 - [ ] Build homepage sections 3.1–3.13.
-- [x] v0.5.0 agent-teams section on the homepage, "Watch your AI team work" (`src/components/Teams.vue`): live tree, drill-in, a worker's approval, spend per agent and model, mixing models. Real screenshots from the chatty2 tutorial "From one agent to a team"; teams marked experimental, no numbers. The deeper `/features/teams` page is still Phase 2.
+- [x] v0.5.0 agent-teams section on the homepage, "Watch your AI team work" (`src/components/Teams.vue`), telling storyline S25 (P3, with P2 and P6): one real screenshot of the live team tree from the chatty2 tutorial "From one agent to a team", three persona promises and a link to the tutorial. Teams are marked experimental; no numbers. The deeper `/features/teams` page (drill-in, approvals, spend per model) is still Phase 2.
 - [ ] `/download` page (OS detection, CLI quickstart, FUSE note, onboarding video).
 - [ ] `/security` trust page (P2 needs it before anything else).
 - [ ] Founder note: draft in `founder-note-draft.md`; owner fills in the placeholders and approves.

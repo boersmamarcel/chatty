@@ -1,6 +1,6 @@
 # Storyline library
 
-Twenty-five storylines (S00–S24). Each storyline is **one person, one task, start to finish**, told so that every beat is a real, shipped Chatty feature. They're the raw material for:
+Twenty-six storylines (S00–S25). Each storyline is **one person, one task, start to finish**, told so that every beat is a real, shipped Chatty feature. They're the raw material for:
 
 - **the homepage** (three of them are the spine: S01, S04, S05, with S02/S03 as proof)
 - **use-case pages** (one page per persona, built from two or three storylines)
@@ -39,6 +39,8 @@ If a feature doesn't appear in a storyline, it probably doesn't belong on the ho
 | [S22](S22-month-end-without-mystery-numbers.md) | Month-end without mystery numbers | P10 Eva | Checked / Deliverables | `/for/finance`, 60s | ★★ |
 | [S23](S23-tidy-my-folder.md) | Tidy my folder | everyone | Steer / See | Broad homepage opener, 15s loop, 45s | ★★★ |
 | [S24](S24-plan-the-offsite.md) | Plan the team day | P11, P12 | Deliverables | `/features/extensions` | ★ (gated on connectors) |
+| **v0.5.0 agent teams** | | | | | |
+| [S25](S25-the-team-that-finds-out-why.md) | The team that finds out why | P3 Sam; P2 Priya, P6 Kenji | See / Checked | Homepage teams section, `/features/teams`, 60s + 3-min | ★★★ |
 
 ★★★ = produce first (Phase 1) · ★★ = Phase 2 · ★ = Phase 3.
 
@@ -53,14 +55,14 @@ If a feature doesn't appear in a storyline, it probably doesn't belong on the ho
 | Artifacts: PDF / chart / table / PPTX / Markdown | S04, S10, S12, S00 |
 | Excel / Word read-write, DuckDB SQL | S04, S15 |
 | File explorer, Cmd/Ctrl+P, editable Source tab | S04, S03 |
-| Sub-agents, worktrees, evidence, roles, teams | S02, S09, S14 |
+| Sub-agents, worktrees, evidence, roles, teams | S02, S09, S14, S25 |
 | PR status bar | S01, S02 |
 | AGENTS.md / CLAUDE.md, SKILL.md skills | S06, S15 |
 | Memory | S06, S12, S15 |
 | ACP (Zed / VS Code) | S07 |
 | Headless / pipe / usage-file / max-duration / broker | S08, S02 |
 | OpenRouter / Azure Entra / Ollama / OpenAI-compatible | S05, S09, S17 |
-| Approval modes, sandbox, network isolation, secrets | S05, S17, S01 |
+| Approval modes, sandbox, network isolation, secrets | S05, S17, S01, S25 (relayed from a worker) |
 | Cost per message, context bar, delegated cost | S09, S00 |
 | Web search, fetch, Wayback, reranker | S10 |
 | MCP catalog (Notion, Atlassian, Google), custom MCP | S11 (gated), S24 (gated) |
