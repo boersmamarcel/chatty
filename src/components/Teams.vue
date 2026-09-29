@@ -6,7 +6,8 @@ const base = import.meta.env.BASE_URL;
 
 // Storyline S25 (strategy/storylines/): one question, a small team, you watching.
 // The screenshot is a real-model capture of the desktop app, from the chatty2
-// tutorial "From one agent to a team" (light theme).
+// tutorial "From one agent to a team" (light theme), cropped to the team tree;
+// the question typed above it in the app is quoted in the caption instead.
 const points = [
   {
     title: "See the work behind every number",
@@ -32,14 +33,18 @@ const points = [
       </SectionHeading>
 
       <figure class="mx-auto mt-16 max-w-6xl md:mt-20">
+        <p class="mb-5 text-center text-sm text-muted-foreground">
+          You ask:
+          <code class="font-mono text-foreground">/agent data-lead Revenue in orders.csv fell in August. Find out why.</code>
+        </p>
         <div class="overflow-hidden rounded-2xl border bg-[#fcfcfc] shadow-2xl shadow-primary/10">
           <!-- On phones the screenshot keeps a legible size and scrolls sideways. -->
           <div class="overflow-x-auto">
             <img
               :src="`${base}media/teams/live-tree.webp`"
               alt="A live team tree: data-lead is running, two workers are done and a third is writing a file"
-              width="1190"
-              height="300"
+              width="1188"
+              height="178"
               class="w-[820px] max-w-none md:w-full"
               loading="lazy"
             />
