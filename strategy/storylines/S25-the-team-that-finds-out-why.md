@@ -24,13 +24,13 @@
 | 6 | The reviewed report: the size of the drop, the biggest driver, the second driver, and what the data can't say. | Report in the chat; `report.md` in the folder | — |
 | 7 *(3-min)* | The finished tree shows each agent's tokens and the team total. The side sheet splits spend by model: dollars for priced models, tokens for local ones. | Finished tree; spend by model | Spend (`user/tutorial-swarm.md#6-read-the-result-and-the-bill`) |
 | 8 *(3-min)* | Kenji's beat: each agent is a short TOML file. Copy `reviewer` into the workspace and add one `model` line to put it on a small local model. The tree now shows two models. | Spec file; tree with a mixed model | Mix models (`user/tutorial-swarm.md#7-mix-models`) |
-| 9 *(3-min)* | Priya's beat: the same team runs with every agent on a local GPU server or the company's approved models. | Settings → Models; tree with local models | Providers & models (`user/providers-and-models.md`) |
+| 9 *(3-min)* | Priya's beat: the team runs where her policy allows. Each agent picks its model: the company's approved models, a local GPU server, or a cloud model, mixed in one team. | Settings → Models; tree showing each agent's model | Providers & models (`user/providers-and-models.md`) |
 
 ## The "aha"
 Beat 3: the answer isn't a black box. Click any agent and you see the queries it ran and what came back.
 
 ## After
-A reviewed report that Sam can defend line by line, a file Sam approved, and a bill split by agent and model. With a local model, the data stayed on Sam's machine.
+A reviewed report that Sam can defend line by line, a file Sam approved, and a bill split by agent and model, with each agent on the model Sam chose for it.
 
 ## Script sketch (60s)
 1. "Revenue fell in August. Why?"
@@ -46,7 +46,7 @@ End card: *Watch your AI team work.*
 - **Sub:** Revenue fell in August, and you want to know why. Hand the question to a lead agent and watch it work it out with an analyst and a reviewer.
 - **3 points** (the persona promises, persona names never on the site):
   - *See the work behind every number* (P3): open any agent to read the queries it ran and what they returned.
-  - *Nothing leaves the building* (P2): point every agent at your own GPU server or your company's approved models.
+  - *You choose where each agent runs* (P2: runs where your policy allows): your own GPU, your company's approved models or a cloud model, per agent. Mix them in one team.
   - *A team is a config file* (P6): each agent is a short file you can read, copy and share.
 - **Quiet line:** Teams are experimental.
 - **CTA:** Try the tutorial →
@@ -59,5 +59,6 @@ End card: *Watch your AI team work.*
 ## Claims check
 - Teams are **experimental**. Never say or imply that a team answers better or more accurately than a single agent; that research hasn't been done. No numbers.
 - Teams need the local agent broker, which runs in the desktop app on macOS and Linux (not Windows yet), and for now the module runtime is switched on by hand. That belongs on the tutorial and feature page, not the homepage.
-- "Nothing leaves the building" carries S05's caveats: traffic goes only to the providers, MCP servers, agents and sites you configure, plus GitHub for update checks; web access is on by default.
+- Frame where the team runs as a choice, never as an absolute: no "nothing leaves" claims. Chatty sends traffic to the providers, MCP servers, agents and sites you configure, plus GitHub for update checks; web access is on by default.
+- Hosted compute is a planned future option for running teams. Mention it only as planned, with no dates, and keep it off the site until it is publicly usable (`08-decisions-and-proof.md`, decision 3).
 - Reports differ from run to run in how they slice the numbers. Show the one you recorded; don't quote its figures as typical.

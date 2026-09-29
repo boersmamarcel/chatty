@@ -15,8 +15,8 @@ const points = [
     text: "Open any agent to read the queries it ran and what they returned.",
   },
   {
-    title: "Nothing leaves the building",
-    text: "Point every agent at your own GPU server or your company's approved models.",
+    title: "You choose where each agent runs",
+    text: "Your own GPU, your company's approved models or a cloud model, per agent. Mix them in one team.",
   },
   {
     title: "A team is a config file",
