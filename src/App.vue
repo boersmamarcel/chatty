@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection.vue";
 import HandItWork from "./components/HandItWork.vue";
 import WatchIt from "./components/WatchIt.vue";
 import Deliverables from "./components/Deliverables.vue";
+import Teams from "./components/Teams.vue";
 import Privacy from "./components/Privacy.vue";
 import ModelsSkills from "./components/ModelsSkills.vue";
 import Roles from "./components/Roles.vue";
@@ -21,6 +22,7 @@ import Footer from "./components/Footer.vue";
     <HandItWork />
     <WatchIt />
     <Deliverables />
+    <Teams />
     <Privacy />
     <ModelsSkills />
     <Roles />
