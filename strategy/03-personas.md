@@ -89,7 +89,7 @@ Personas are named so the team can say "would Daan care?" in a review. The names
 
 **Entry point:** `chatty-tui --openai-compat-url http://gpu-box:8000` or Settings → Azure OpenAI → "Use Entra ID".
 
-**Storylines:** S05, S08, S09, S14
+**Storylines:** S05, S08, S09, S14, S25
 
 ---
 
@@ -124,7 +124,7 @@ Personas are named so the team can say "would Daan care?" in a review. The names
 
 **Entry point:** Desktop app → OpenRouter key → set workspace to the folder with the exports → "Load sales.xlsx and…"
 
-**Storylines:** S04, S10, S11, S15 (skill reuse)
+**Storylines:** S04, S10, S11, S15 (skill reuse), S25 (agent team)
 
 ---
 
@@ -177,7 +177,7 @@ Personas are named so the team can say "would Daan care?" in a review. The names
 
 **Entry point:** Tutorial "your first named worker" (20 min) → `--team coder-reviewer`.
 
-**Storylines:** S02, S14, S16, S09
+**Storylines:** S02, S14, S16, S09, S25
 
 ---
 

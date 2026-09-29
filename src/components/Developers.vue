@@ -51,7 +51,7 @@ const snippet = [
       </div>
 
       <div class="mt-12 grid gap-10 lg:grid-cols-2">
-        <div class="space-y-8">
+        <div class="min-w-0 space-y-8">
           <a v-for="i in items" :key="i.title" :href="i.href" target="_blank" class="group flex gap-4">
             <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-white/10 text-sun">
               <component :is="i.icon" class="size-5" />
@@ -63,7 +63,7 @@ const snippet = [
           </a>
         </div>
 
-        <div class="space-y-5">
+        <div class="min-w-0 space-y-5">
           <pre class="overflow-x-auto rounded-2xl border border-white/10 bg-black/40 p-5 text-sm leading-relaxed"><code><template v-for="(l, n) in snippet" :key="n"><span :class="l.startsWith('#') ? 'text-white/40' : 'text-white'">{{ l }}</span>
 </template></code></pre>
           <figure>

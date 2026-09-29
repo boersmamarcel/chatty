@@ -18,6 +18,7 @@ const base = import.meta.env.BASE_URL;
 const routeList = [
   { href: "#work", label: "What it does" },
   { href: "#control", label: "How it works" },
+  { href: "#teams", label: "Teams" },
   { href: "#privacy", label: "Privacy" },
   { href: "#roles", label: "Use cases" },
   { href: "#developers", label: "Developers" },
@@ -41,13 +42,13 @@ const isOpen = ref(false);
           v-for="r in routeList"
           :key="r.href"
           :href="r.href"
-          class="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          class="whitespace-nowrap px-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors xl:px-3"
           >{{ r.label }}</a
         >
         <a
           :href="links.docs"
           target="_blank"
-          class="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          class="whitespace-nowrap px-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors xl:px-3"
           >Docs ↗</a
         >
       </nav>
