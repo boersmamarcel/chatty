@@ -8,6 +8,7 @@ const base = import.meta.env.BASE_URL;
 // The screenshot is a real-model capture of the desktop app, from the chatty2
 // tutorial "From one agent to a team" (light theme), cropped to the team tree;
 // the question typed above it in the app is quoted in the caption instead.
+// Layout and framing follow WatchIt.vue, the neighbouring feature section.
 const points = [
   {
     title: "See the work behind every number",
@@ -25,19 +26,20 @@ const points = [
 </script>
 
 <template>
-  <section id="teams" class="bg-muted/50 py-24 md:py-36">
+  <section id="teams" class="bg-muted/50 py-20 md:py-28">
     <div class="container">
-      <SectionHeading eyebrow="New in v0.5.0" title="Watch your AI team work." center>
+      <SectionHeading eyebrow="New in v0.5.0" title="Watch your AI team work.">
         Revenue fell in August, and you want to know why. Hand the question to a lead agent and
         watch it work it out with an analyst and a reviewer.
       </SectionHeading>
 
-      <figure class="mx-auto mt-16 max-w-6xl md:mt-20">
-        <p class="mb-5 text-center text-sm text-muted-foreground">
-          You ask:
-          <code class="font-mono text-foreground">/agent data-lead Revenue in orders.csv fell in August. Find out why.</code>
-        </p>
-        <div class="overflow-hidden rounded-2xl border bg-[#fcfcfc] shadow-2xl shadow-primary/10">
+      <figure class="mt-12">
+        <div class="overflow-hidden rounded-2xl border bg-card shadow-2xl shadow-primary/10">
+          <div class="flex items-center gap-1.5 border-b bg-muted/60 px-4 py-2.5">
+            <span class="size-3 rounded-full bg-destructive/80"></span>
+            <span class="size-3 rounded-full bg-sun/80"></span>
+            <span class="size-3 rounded-full bg-leaf/80"></span>
+          </div>
           <!-- On phones the screenshot keeps a legible size and scrolls sideways. -->
           <div class="overflow-x-auto">
             <img
@@ -50,24 +52,24 @@ const points = [
             />
           </div>
         </div>
-        <figcaption class="mt-5 text-center text-sm text-muted-foreground">
-          Set it to ask first, and any agent's command or file change waits for your OK.
+        <figcaption class="mt-3 text-center text-xs text-muted-foreground">
+          Screenshot of the Chatty desktop app, working on “Revenue in orders.csv fell in August.
+          Find out why.” Set it to ask first, and any agent's command or file change waits for
+          your OK.
         </figcaption>
       </figure>
 
-      <div class="mx-auto mt-16 grid max-w-5xl gap-10 text-center md:mt-20 md:grid-cols-3 md:gap-12">
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
         <div v-for="p in points" :key="p.title">
-          <h3 class="font-semibold">{{ p.title }}</h3>
+          <h3 class="text-xl font-semibold">{{ p.title }}</h3>
           <p class="mt-2 leading-relaxed text-muted-foreground">{{ p.text }}</p>
         </div>
       </div>
 
-      <div class="mt-16 text-center md:mt-20">
-        <a :href="links.swarmTutorial" target="_blank" class="font-medium text-primary hover:underline">
-          Try the tutorial →
-        </a>
-        <p class="mt-3 text-xs text-muted-foreground">Teams are experimental.</p>
-      </div>
+      <p class="mt-10 text-sm text-muted-foreground">
+        Teams are experimental.
+        <a :href="links.swarmTutorial" target="_blank" class="font-medium text-primary hover:underline">Try the tutorial →</a>
+      </p>
     </div>
   </section>
 </template>
