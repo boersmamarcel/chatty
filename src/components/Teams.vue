@@ -24,9 +24,11 @@ const points = [
   },
 ];
 
-// The dev team: five agents, each a short config file, run unattended in the
-// terminal. Every number below is from two real runs on one local model; keep
-// them as measured (strategy/08-decisions-and-proof.md).
+// A second team in the same section: a dev team as an example of what a team is
+// (a handful of agents, each a short config file). No run numbers here: the
+// site's proof rules (strategy/08-decisions-and-proof.md) ask that every
+// published figure ships with how it was measured, and this block is about the
+// feature, not a result.
 const devRoster = [
   { name: "dev-lead", role: "Only delegates and merges. Never writes code." },
   { name: "product-owner", role: "Writes the stories and their Gherkin scenarios." },
@@ -35,18 +37,6 @@ const devRoster = [
   { name: "code-reviewer", role: "Returns APPROVE or REQUEST_CHANGES." },
 ];
 const devSteps = ["story", "plan", "build", "tests", "review", "merge"];
-const devRuns = [
-  {
-    when: "Run 1 · 26 Oct 2026",
-    result: "6 of 7 stories done",
-    detail: "131 tests passing, 51 commits",
-  },
-  {
-    when: "Run 2 · 28–29 Oct 2026, 8 hours",
-    result: "2 of 8 stories done",
-    detail: "118 tests passing, 19 commits, main green at the end",
-  },
-];
 </script>
 
 <template>
@@ -91,16 +81,14 @@ const devRuns = [
       </div>
 
       <div class="mt-16 border-t pt-16">
-        <p class="text-sm font-semibold uppercase tracking-wide text-primary">
-          Experimental · measured on Chatty 0.7.6 and 0.7.8
-        </p>
-        <h3 class="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">
-          Or hand it a backlog: a dev team that runs unattended.
+        <h3 class="text-2xl font-semibold tracking-tight md:text-3xl">
+          Build your own team, for example a dev team.
         </h3>
         <p class="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
-          Five agents, each defined by a short config file, work through your stories one at a
-          time in the terminal, on a local model on your own GPU. After every iteration an
-          objective gate runs the test suite, and nothing moves on until it is green.
+          A team is a handful of agents, each defined by a short config file: who leads, who does
+          what, which tools each may use, which model each runs on. A dev team splits a software
+          task the way a human team would, and you can point it at a backlog and let it work
+          through it in the terminal.
         </p>
 
         <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -119,34 +107,15 @@ const devRuns = [
             <li aria-hidden="true" class="text-muted-foreground">↻ next story</li>
           </ol>
           <p class="mt-3 text-sm text-muted-foreground">
-            Gate after every iteration: the suite must be green.
+            Chatty can run your own check, such as the test suite, after each worker's task, so a
+            claim that the tests pass is verified, not trusted.
           </p>
         </div>
 
-        <div class="mt-6 grid gap-4 md:grid-cols-2">
-          <div v-for="r in devRuns" :key="r.when" class="rounded-xl border bg-card p-5">
-            <p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">{{ r.when }}</p>
-            <p class="mt-2 text-xl font-semibold">{{ r.result }}</p>
-            <p class="mt-1 text-sm text-muted-foreground">{{ r.detail }}</p>
-          </div>
-        </div>
         <p class="mt-4 text-sm leading-relaxed text-muted-foreground">
-          What a single-GPU local model (Qwen3.8-27B-INT4 via vLLM) built over two unattended
-          runs: a small CLI. It is slow, roughly 2.5 hours per story on that model. Run
-          unattended teams in a container.
+          Teams are experimental, and a team that runs unattended should run in a container.
           <a :href="links.devTeamTutorial" target="_blank" class="font-medium text-primary hover:underline">Set up the dev team →</a>
         </p>
-        <details class="mt-4 rounded-xl border bg-card p-4 text-sm text-muted-foreground">
-          <summary class="cursor-pointer font-medium text-foreground">How we measured this</summary>
-          <ul class="mt-3 list-disc space-y-1.5 pl-5 leading-relaxed">
-            <li>Task: build a small command-line tool from a written brief, story by story. Run 1 built a checker for <code>.env</code> files (Chatty 0.7.6, 26 Oct 2026). Run 2 built a filter for JSON-lines log files (Chatty 0.7.8, 28–29 Oct 2026, 8 hours).</li>
-            <li>Model: RedHatAI/Qwen3.8-27B-INT4 served by vLLM on one local GPU. No cloud model, no API cost.</li>
-            <li>One run each, so these are two data points, not an average. The commit counts include the snapshot commits that the driver script makes after each iteration.</li>
-            <li>“Done” means the story is ticked in the backlog; the team’s rules require reviewer approval and a passing suite before it is ticked. A script outside the agents runs the whole suite after every iteration; the test counts and commits come from that script and from the repository.</li>
-            <li>Run 1 lost its first hours to setup problems that have since been fixed, so its pace is not a fair guide. Run 2 had a red test suite for its first two iterations before the team repaired it.</li>
-            <li>The raw logs are kept and not yet published.</li>
-          </ul>
-        </details>
       </div>
 
       <p class="mt-10 text-sm text-muted-foreground">
