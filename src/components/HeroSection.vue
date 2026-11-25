@@ -31,8 +31,8 @@ const promises = [
         </p>
 
         <h1 class="mt-6 text-5xl font-bold leading-[1.05] md:text-6xl lg:text-7xl">
-          An AI coworker
-          <span class="block bg-gradient-to-r from-primary via-sky to-sun bg-clip-text pb-2 text-transparent">you can watch.</span>
+          Your AI,
+          <span class="block bg-gradient-to-r from-primary via-sky to-sun bg-clip-text pb-2 text-transparent">your rules</span>
         </h1>
 
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
