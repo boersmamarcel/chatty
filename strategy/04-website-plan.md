@@ -56,7 +56,7 @@ Each block lists its **job**, **copy draft**, **media** and the **storyline** it
 - **Sub:** Chatty does real work on your machine (code, data, documents, the web) in a terminal you can watch, a browser you can take over, and with results it checks before calling them done. Use any model, including local ones.
 - **CTAs:** `Download for {detected OS}` (primary) · `Try it in your terminal` (copies `chatty-tui --ollama`; shows install note) · small link: *Watch the 90-second film*
 - **Media:** S00 film, autoplay muted, captions, poster frame = the Agent tab mid-command.
-- **Under the fold line:** `macOS · Linux · Windows | Works with OpenRouter, Azure OpenAI, Ollama and any OpenAI-compatible server`
+- **Under the fold line:** `Mac, Linux and Windows | Works with OpenRouter, Azure OpenAI, Ollama and any OpenAI-compatible server`
 
 ### 3.2 "See everything": S01
 - **H2:** Why did that fail? Just ask.
