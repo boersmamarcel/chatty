@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Briefcase, Calculator, Landmark, Megaphone, Store, ShieldCheck } from "lucide-vue-next";
+import { Briefcase, Calculator, Landmark, Megaphone, Store, ShieldCheck, Users } from "lucide-vue-next";
 import SectionHeading from "./SectionHeading.vue";
 
 const roles = [
@@ -38,6 +38,12 @@ const roles = [
     who: "IT & security",
     task: "Give your team an AI assistant that works with your company's approved models.",
     why: "Open source, no telemetry, a sandbox, per-action approval, and secrets the AI never sees.",
+  },
+  {
+    icon: Users,
+    who: "Operations & HR",
+    task: "Read this month's support tickets, group them by cause and draft the three fixes worth doing first.",
+    why: "Your files stay on your computer, and it asks before it changes a single file.",
   },
 ];
 </script>
