@@ -3,10 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-vue-next";
 import TaskCard from "./TaskCard.vue";
 import { links, platforms } from "@/data/product";
-import { useLatestRelease } from "@/composables/useLatestRelease";
 import confetti from "canvas-confetti";
-
-const { version } = useLatestRelease();
 
 function onDownloadClick() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
