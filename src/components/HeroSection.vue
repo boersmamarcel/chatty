@@ -4,8 +4,14 @@ import { ArrowRight, Download } from "lucide-vue-next";
 import TaskCard from "./TaskCard.vue";
 import { links, platforms } from "@/data/product";
 import { useLatestRelease } from "@/composables/useLatestRelease";
+import confetti from "canvas-confetti";
 
 const { version } = useLatestRelease();
+
+function onDownloadClick() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  confetti({ particleCount: 80, spread: 70, origin: { y: 0.7 } });
+}
 const promises = [
   "No account",
   "No subscription",
@@ -43,7 +49,7 @@ const promises = [
 
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
           <Button as-child size="lg" class="rounded-full px-7 text-base">
-            <a :href="links.releases" target="_blank">
+            <a :href="links.releases" target="_blank" @click="onDownloadClick">
               <Download class="mr-2 size-5" /> Download free
             </a>
           </Button>
