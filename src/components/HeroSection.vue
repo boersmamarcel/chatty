@@ -3,9 +3,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-vue-next";
 import TaskCard from "./TaskCard.vue";
 import { links, platforms } from "@/data/product";
-import { useLatestRelease } from "@/composables/useLatestRelease";
+import confetti from "canvas-confetti";
 
-const { version } = useLatestRelease();
+function onDownloadClick() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  confetti({ particleCount: 80, spread: 70, origin: { y: 0.7 } });
+}
 const promises = [
   "No account",
   "No subscription",
@@ -27,12 +30,12 @@ const promises = [
           class="inline-flex items-center gap-2 rounded-full border bg-card/70 px-3 py-1 text-xs text-muted-foreground"
         >
           <span class="size-2 rounded-full bg-leaf"></span>
-          Free &amp; open source<template v-if="version"> · {{ version }}</template>
+          Free &amp; open source · now with teams
         </p>
 
         <h1 class="mt-6 text-5xl font-bold leading-[1.05] md:text-6xl lg:text-7xl">
           An AI coworker
-          <span class="block bg-gradient-to-r from-primary via-sky to-sun bg-clip-text pb-2 text-transparent">you can watch.</span>
+          <span class="block bg-gradient-to-r from-primary via-sky to-sun bg-clip-text pb-2 text-transparent">you can trust.</span>
         </h1>
 
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
@@ -43,13 +46,13 @@ const promises = [
 
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
           <Button as-child size="lg" class="rounded-full px-7 text-base">
-            <a :href="links.releases" target="_blank">
+            <a :href="links.releases" target="_blank" @click="onDownloadClick">
               <Download class="mr-2 size-5" /> Download free
             </a>
           </Button>
           <Button as-child size="lg" variant="outline" class="rounded-full px-7 text-base">
             <a href="#start">
-              Set up in 10 minutes <ArrowRight class="ml-2 size-5" />
+              Set up in 5 minutes <ArrowRight class="ml-2 size-5" />
             </a>
           </Button>
         </div>
