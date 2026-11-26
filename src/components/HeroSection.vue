@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-vue-next";
 import TaskCard from "./TaskCard.vue";
-import { links, platforms } from "@/data/product";
+import { links } from "@/data/product";
 import confetti from "canvas-confetti";
 
 function onDownloadClick() {
@@ -62,7 +62,7 @@ const promises = [
             <span class="size-1.5 rounded-full bg-primary"></span>{{ p }}
           </li>
         </ul>
-        <p class="mt-3 text-xs text-muted-foreground">{{ platforms.join(" · ") }}</p>
+        <p class="mt-3 text-xs text-muted-foreground">Mac, Linux and Windows</p>
       </div>
 
       <TaskCard />
