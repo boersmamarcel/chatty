@@ -67,5 +67,9 @@ const promises = [
 
       <TaskCard />
     </div>
+
+    <p class="hero-note container -mt-6 pb-10 text-center text-sm text-muted-foreground md:-mt-12">
+      Runs on your computer.
+    </p>
   </section>
 </template>
