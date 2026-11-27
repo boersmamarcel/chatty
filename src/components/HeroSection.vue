@@ -52,7 +52,7 @@ const promises = [
           </Button>
           <Button as-child size="lg" variant="outline" class="rounded-full px-7 text-base">
             <a href="#start">
-              Set up in 5 minutes <ArrowRight class="ml-2 size-5" />
+              Set up in 3 minutes <ArrowRight class="ml-2 size-5" />
             </a>
           </Button>
         </div>
