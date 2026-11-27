@@ -30,7 +30,7 @@ const promises = [
           class="inline-flex items-center gap-2 rounded-full border bg-card/70 px-3 py-1 text-xs text-muted-foreground"
         >
           <span class="size-2 rounded-full bg-leaf"></span>
-          Free &amp; open source · now with teams
+          Free and open source · now with teams
         </p>
 
         <h1 class="mt-6 text-5xl font-bold leading-[1.05] md:text-6xl lg:text-7xl">
