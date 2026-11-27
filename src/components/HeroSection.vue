@@ -47,7 +47,7 @@ const promises = [
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
           <Button as-child size="lg" class="rounded-full px-7 text-base">
             <a :href="links.releases" target="_blank" @click="onDownloadClick">
-              <Download class="mr-2 size-5" /> Download free
+              <Download class="mr-2 size-5" /> Download Chatty, free
             </a>
           </Button>
           <Button as-child size="lg" variant="outline" class="rounded-full px-7 text-base">
