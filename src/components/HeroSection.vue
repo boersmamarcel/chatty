@@ -39,6 +39,10 @@ const promises = [
         </h1>
 
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+          Runs on your own computer.
+        </p>
+
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
           Give Chatty a folder and a task. It makes a plan, works through it step by step,
           and hands you finished files: reports, spreadsheets, slides. You see everything it
           does, and it asks before changing anything you haven't allowed.
